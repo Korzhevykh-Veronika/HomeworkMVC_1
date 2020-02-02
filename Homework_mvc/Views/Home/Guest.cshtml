@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Guest";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="review-header m-3 d-flex flex-row justify-content-between">
+        <h2 >Отзывы</h2>
+        <button class="btn" id="showHideContent">Написать отзыв</button>
+    </div>
+        <form id="form-review" style="display:none;">
+            <div class="form-group">
+                @Html.Label("name", "Ваше имя")
+                @Html.TextBox("name", null, new { @class = "form-control", @pattern = "^[A-Za-zА-Яа-яЁё]+$", @required = "true" })
+            </div>
+            <div class="form-group">
+                @Html.Label("review", "Отзыв")
+                @Html.TextArea("review", null, new { @class = "form-control" , @required = "true"})
+            </div>
+            <button type="submit" class="btn btn-primary">Оставить отзыв</button>
+        </form>
+    
+<div class="card">
+    <div class="card-header ">
+        <div class=" float-left">Автор отзыва</div>
+        <div class=" float-right"> 2 days agо</div>
+    </div>
+    <div class="card-body text-center">
+        <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis fermentum mollis. Nulla at egestas elit. Vestibulum cursus mollis eros quis commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur arcu nunc, luctus quis aliquet at, mollis vitae eros. Morbi leo massa, sodales sed tellus ac, posuere egestas ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam luctus neque sed nisl volutpat tempus.
+
+            Quisque quis sollicitudin metus. Maecenas sed risus tempor tortor cursus viverra et finibus tortor. Ut tincidunt libero id massa placerat vehicula. Vestibulum tincidunt quis felis rhoncus tristique. Proin tristique sapien leo, nec porta tellus mollis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in condimentum massa, et accumsan libero.
+        </p>
+    </div>
+</div>
+
+<div class="card ">
+    <div class="card-header ">
+        <div class=" float-left">Автор отзыва</div>
+        <div class=" float-right"> 2 days agо</div>
+    </div>
+    <div class="card-body text-center">
+        <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis fermentum mollis. Nulla at egestas elit. Vestibulum cursus mollis eros quis commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur arcu nunc, luctus quis aliquet at, mollis vitae eros. Morbi leo massa, sodales sed tellus ac, posuere egestas ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam luctus neque sed nisl volutpat tempus.
+
+            Quisque quis sollicitudin metus. Maecenas sed risus tempor tortor cursus viverra et finibus tortor. Ut tincidunt libero id massa placerat vehicula. Vestibulum tincidunt quis felis rhoncus tristique. Proin tristique sapien leo, nec porta tellus mollis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in condimentum massa, et accumsan libero.
+        </p>
+    </div>
+</div>
+<div class="card ">
+    <div class="card-header ">
+        <div class=" float-left">Автор отзыва</div>
+        <div class=" float-right"> 2 days agо</div>
+    </div>
+    <div class="card-body text-center">
+        <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis fermentum mollis. Nulla at egestas elit. Vestibulum cursus mollis eros quis commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur arcu nunc, luctus quis aliquet at, mollis vitae eros. Morbi leo massa, sodales sed tellus ac, posuere egestas ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam luctus neque sed nisl volutpat tempus.
+
+            Quisque quis sollicitudin metus. Maecenas sed risus tempor tortor cursus viverra et finibus tortor. Ut tincidunt libero id massa placerat vehicula. Vestibulum tincidunt quis felis rhoncus tristique. Proin tristique sapien leo, nec porta tellus mollis sit amet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam in condimentum massa, et accumsan libero.
+        </p>
+    </div>
+</div>

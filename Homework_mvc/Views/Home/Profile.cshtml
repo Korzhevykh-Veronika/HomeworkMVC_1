@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2 class="text-center m-3">Анкета</h2>
+@using (Html.BeginForm("Profile", "Home"))
+{
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            @Html.Label("first-name", "Имя")
+            @Html.TextBox("first-name", null, new { @class = "form-control", @pattern = "^[A-Za-zА-Яа-яЁё]+$", @required = "true" })
+        </div>
+        <div class="form-group col-md-6">
+            @Html.Label("last-name", "Фамилия")
+            @Html.TextBox("last-name", null, new { @class = "form-control", @pattern = "^[A-Za-zА-Яа-яЁё]+$", @required = "true" })
+        </div>
+    </div>
+    <div class="form-row justify-content-center">
+        <div class="form-group col-md-6 ">
+            @Html.Label("inputEmail", "Email")
+
+            @Html.TextBox("inputEmail", null, new { @type = "email", @class = "form-control", @required = "true" })
+
+        </div>
+        <div class="form-group col-md-6 ">
+            @Html.Label("inputPhone", "Телефон")
+
+            @Html.TextBox("inputPhone", null, new { @type = "phone", @class = "form-control" })
+
+        </div>
+    </div>
+
+    <fieldset class="form-group">
+        <div class="row">
+            <legend class="col-form-label col-sm-1 pt-0">Пол</legend>
+            <div class="col-sm-11">
+                <div class="form-check">
+                    @Html.RadioButton("Gender", "option1", new { @class = "form-check-input", @checked = "true" })
+                    @Html.Label("Gender", "Мужчина", new { @class = "form-check-label" })
+                </div>
+                <div class="form-check">
+                    @Html.RadioButton("Gender", "option2", new { @class = "form-check-input" })
+                    @Html.Label("Gender", " Женщина", new { @class = "form-check-label" })
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+
+    @MyHelpers.HtmlList(new string[] { "Какое ваше любимое блюдо?", " Ваши любимые продукты?", "Блюда, которые вам легче всего приготовить?", " Есть ли блюда и продукты, которые вы считаете «вредными», и потребление которых хотели бы ограничить?", "Как часто необходимо потреблять мясо?", "Сколько времени в среднем в день вы готовы выделять на готовку и обслуживание кухни в целом?" })
+
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <div class="form-check">
+                @Html.CheckBox("gridCheck1", false, new { @class = "form-check-input", @required = "true" })
+                @Html.Label("gridCheck1", "Я разрешаю использовать свои личные данные для данного сайта", new { @class = "form-check-label" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Отправить анкету</button>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,15 @@
+﻿@helper HtmlList(string[] items)
+{
+    <ol>
+        @foreach (var item in items)
+        {
+            <li>@item</li>
+            <div class="form-group row">
+                <label for="@item.Length" class="col-sm-2 col-form-label">Ответ</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="@item.Length">
+                </div>
+            </div>
+        }
+    </ol>
+}
